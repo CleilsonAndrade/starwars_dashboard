@@ -19,8 +19,7 @@ ul {
   background: #000;
   color: #fff;
   width: 250px;
-  height: 100vh;
-  padding: 20px 0;
+  padding: 20px 8px;
   font-size: 16px;
   font-weight: bold;
   display: flex;
@@ -53,4 +52,110 @@ ul {
 .content {
   background: #f5f6fa;
   width: 100%;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  margin: 0 20px;
+  height: 132px;
+  border-radius: 8px;
+}
+
+.card-small {
+  width: 240px;
+  display: flex;
+  align-items: center;
+}
+
+.card-large {
+  width: 464px;
+}
+
+.card .card-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.card .card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.cards-header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-info h2 {
+  font-size: 54px;
+  font-weight: 500;
+  color: #FFBA33;
+}
+
+.card-info p {
+  font-size: 16px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-large .card-container .card-content:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.table {
+  margin: 40px;
+  width: 642px;
+  height: 450px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.table h5 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.table table th {
+  border-bottom: 1px solid #5e5e5e;
+  padding: 10px 0;
+}
+
+.table table td {
+  border-bottom: 1px solid #e9e9e9;
+  padding: 10px 0;
+}
+
+.table table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.content-info {
+  display: flex;
+  align-items: center;
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 450px;
+  background: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
