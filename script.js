@@ -13,21 +13,25 @@ function preencherContador(){
   ])
   .then(
     function(results){
-      personagensContador.innerHTML = results[0].data.count
-      luasContador.innerHTML = results[1].data.count
-      planetasContador.innerHTML = results[2].data.count
-      navesContador.innerHTML = results[3].data.count
+      personagensContador.innerHTML = results[0].count
+      luasContador.innerHTML = results[1].count
+      planetasContador.innerHTML = results[2].count
+      navesContador.innerHTML = results[3].count
     }
   )
 }
 
-function swapiGet(param){
-  return axios.get(`https://swapi.dev/api/${param}`)
+ const swapiGet = async (param) => {
+  const response = await fetch(`https://swapi.dev/api/${param}`)
+  if(response.status === 200){
+    const data = await response.json()
+    return data
+  }
 }
 
 async function preencherTabela(){
-  const response = await swapiGet('films/')
-  const tableData = response.data.results
+  const data = await swapiGet('films/')
+  const tableData = data.results
 
   tableData.forEach(film => {
     table.insertAdjacentHTML('afterbegin',
@@ -45,20 +49,20 @@ google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(desenharGrafico);
 
 async function desenharGrafico() {
-  const response = await swapiGet('vehicles/')
-  const vehiclesArray = response.data.results
+  const response = await swapiGet('planets/')
+  const planetsArray = response.results
 
   const dataArray = []
   dataArray.push(['Veículos', 'Passageiros'])
 
-  vehiclesArray.forEach((vehicle) => {
-    dataArray.push([vehicle.name, Number(vehicle.passengers)])
+  planetsArray.forEach((planet) => {
+    dataArray.push([planet.name, Number(planet.diameter)])
   })
 
   var data = google.visualization.arrayToDataTable(dataArray);
 
   var options = {
-    title: 'Estáticas',
+    title: 'Tamanho dos planetas',
     legend: 'none'
   };
 
@@ -68,5 +72,4 @@ async function desenharGrafico() {
 }
 
 preencherTabela()
-
 preencherContador()
