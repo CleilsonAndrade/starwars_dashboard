@@ -17,7 +17,7 @@
 * [Licença](#licença)
 
 # 📃 <span id="descrição">Descrição</span>
-Aplicação desenvolvida utilizando a API do [**SWAPI**](https://swapi.dev/), exibindo dados dos 7 filmes da franquia StarWars, utilizando a lib [**Google Charts**](https://developers.google.com/chart?hl=pt-br) para exibição de gráficos em formato de dashboard, realizando requisições via fetch API por meio de Promises.
+Aplicação desenvolvida utilizando a API do [**SWAPI**](https://swapi.dev/), exibindo dados dos 7 filmes da franquia StarWars, utilizando a lib [**Google Charts**](https://developers.google.com/chart?hl=pt-br) para exibição de gráficos em formato de dashboard, realizando requisições via fetch API por meio de Promises e utilizando o pacote de ícones [**Feather**](https://feathericons.com/).
 
 # 📌 <span id="requisitos">Requisitos Funcionais</span>
 - [x] Exibição de dados<br>
