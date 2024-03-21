@@ -52,7 +52,7 @@ Aplicação desenvolvida utilizando a API do [**SWAPI**](https://swapi.dev/), ex
 # 🚀 <span id="instalação">Instalação</span>
 ```bash
   # Clone este repositório:
-  $ git clone https://github.com/CleilsonAndrade/starwars_dashboard
+  $ git clone https://github.com/CleilsonAndrade/starwars_dashboard.git
   $ cd ./starwars_dashboard
 ```
 
